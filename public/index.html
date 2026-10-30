@@ -101,7 +101,7 @@ footer{background:#061224;color:#a8b8cd;padding:25px 5.2% 18px}.footer-inner{max
   <section id="faq" style="padding:34px 2px 0"><h2 class="section-title" style="font-size:23px">A few things to know</h2><p class="section-sub" style="margin-bottom:0">Ticket price is KES 500 each. The event is scheduled for January 5, 2027. Tickets are only confirmed after payment verification; this page does not issue a ticket merely when a payment request is started.</p></section>
 </main>
 <footer><div class="footer-inner"><a class="brand" href="#home"><span class="brandmark">◆</span><span><strong>TALANTA TICKETS</strong><small>YOUR MATCH. YOUR MOMENT.</small></span></a><div class="footer-links"><a href="#home">Home</a><a href="#booking">Event details</a><a href="#faq">FAQ</a><a href="mailto:support@example.com">Contact support</a></div><div class="mpay"><span class="mpaymark">M</span> MegaPay</div></div><div class="copyright"><span>© <span id="year"></span> Talanta Tickets. All rights reserved.</span><span>Secure checkout powered by MegaPay</span></div></footer>
-<div class="toast" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon">✓</div><h2 id="modalTitle">Booking details received</h2><p id="modalText">Your order details are ready.</p><div class="warning">An accepted STK Push is not proof of payment. Your ticket is not confirmed until MegaPay payment verification is completed. Keep your booking reference for support.</div><div class="modal-actions"><button class="btn dark" id="closeModal" type="button">Back to booking</button></div></div></div>
+<div class="toast" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon">✓</div><h2 id="modalTitle">Booking details received</h2><p id="modalText">Your order details are ready.</p><div class="modal-actions"><button class="btn dark" id="closeModal" type="button">Back to booking</button></div></div></div>
 <script>
 const price=500;let quantity=1;
 const $=id=>document.getElementById(id);
@@ -123,7 +123,7 @@ $('bookingForm').addEventListener('submit',async e=>{
    const data=await response.json();
    if(!response.ok) throw new Error(data.error||'Payment could not be started.');
    $('modalTitle').textContent='Check your phone';
-   $('modalText').textContent='MegaPay has accepted the payment request. Approve the M-PESA prompt on your phone. Booking reference: '+(data.orderId||'pending')+'. Your ticket will only be confirmed after the payment is verified.';
+   $('modalText').textContent='Approve the M-PESA prompt on your phone. Booking reference: '+(data.orderId||'pending')+'. Your ticket will only be confirmed after the payment is verified.';
    $('modal').classList.add('show');
  }catch(err){
    $('modalTitle').textContent='Checkout could not start';
