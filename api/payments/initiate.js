@@ -45,7 +45,7 @@ export default async function handler(req, res) {
     const upstream = await fetch(MEGAPAY_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ api_key: apiKey, email: merchantEmail, amount, msisdn }),
+      body: JSON.stringify({ api_key: apiKey, email: merchantEmail, amount, msisdn, reference: orderId }),
       signal: AbortSignal.timeout(20000)
     });
     const result = await upstream.json().catch(() => ({}));
@@ -62,6 +62,9 @@ export default async function handler(req, res) {
 
     if (!accepted) {
       console.error('Unexpected MegaPay initiation response:', result);
+      if (String(result.ResultCode) === '102' && /reference/i.test(String(result.errorMessage || result.ResultDesc || ''))) {
+        return json(res, 502, { error: 'MegaPay requires a payment reference. The request has been updated; please try again once the new version is deployed.' });
+      }
       return json(res, 502, { error: 'MegaPay returned an unexpected response. No ticket has been issued.' });
     }
 
