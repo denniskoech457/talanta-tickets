@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<circle cx="120" cy="120" r="116" fill="#fff" stroke="#d71920" stroke-width="8"/>
+<circle cx="120" cy="120" r="91" fill="#d71920"/>
+<circle cx="120" cy="120" r="69" fill="#fff"/>
+<clipPath id="c"><circle cx="120" cy="120" r="62"/></clipPath>
+<g clip-path="url(#c)">
+<rect x="58" y="58" width="124" height="124" fill="#fff"/>
+<path d="M58 58h31l93 93v31h-31L58 89zM120 58h31l31 31v31zM58 120v31l31 31h31z" fill="#1767ad"/>
+<path d="M89 58h31l62 62v31h-31L89 89zM58 89v31l62 62H89l-31-31z" fill="#1767ad"/>
+</g>
+<text x="120" y="37" fill="#fff" font-family="Arial,sans-serif" font-size="15" font-weight="bold" text-anchor="middle">FC BAYERN</text>
+<text x="120" y="213" fill="#fff" font-family="Arial,sans-serif" font-size="17" font-weight="bold" text-anchor="middle">MÜNCHEN</text>
+</svg>

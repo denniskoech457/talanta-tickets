@@ -1,0 +1,9 @@
+{
+  "name": "talanta-tickets-vercel",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": { "dev": "vercel dev" },
+  "devDependencies": { "vercel": "^48.1.0" }
+}

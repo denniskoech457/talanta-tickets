@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071426">
+<title>Talanta Tickets — Bayern Munich vs Ajax</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071426;--navy2:#0c2038;--gold:#f8bd55;--gold2:#ffda8a;--ink:#13233b;--muted:#667791;--line:#e1e9f3;--paper:#f4f7fb;--green:#087f5b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:"DM Sans",sans-serif;color:var(--ink)}button,input{font:inherit}button{cursor:pointer}
+.topbar{height:76px;background:#071426;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 max(5.2%,calc((100% - 1320px)/2));gap:24px;border-bottom:1px solid #ffffff16}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:white;min-width:max-content}.brandmark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#ffe4a4,#e8a52c);color:#122139;display:grid;place-items:center;font-size:24px;box-shadow:0 8px 22px #e8a52c26}.brand strong{display:block;font:800 16px Manrope,sans-serif;letter-spacing:.02em}.brand small{display:block;color:#a9bfd8;font-size:10px;letter-spacing:.13em;margin-top:3px}.nav{display:flex;gap:30px;align-items:center}.nav a{color:#d5dfed;text-decoration:none;font-size:13px}.nav a:hover{color:var(--gold)}.top-right{display:flex;align-items:center;gap:18px;font-size:12px;color:#d5dfed}.secure{display:flex;align-items:center;gap:7px}.mpay{font-weight:800;font-size:16px;color:white;display:flex;align-items:center;gap:7px}.mpaymark{color:#4d9cff;font-size:24px}
+.hero{background:var(--navy);color:white;position:relative;overflow:hidden;min-height:470px;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#061224 0%,#071426ef 31%,#07142652 64%,#07142635),linear-gradient(0deg,#071426 0%,transparent 34%),url('/assets/stadium-background.jpg') center 45%/cover;z-index:-2}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 28%,#2e6ba62c,transparent 35%);z-index:-1}
+.hero-inner{max-width:1320px;margin:auto;padding:64px 5.2% 34px;display:grid;grid-template-columns:1.12fr .88fr;gap:30px;align-items:center;min-height:420px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:25px;height:2px;background:var(--gold)}h1{font:800 clamp(42px,5vw,70px)/1.03 Manrope,sans-serif;letter-spacing:-.055em;margin:19px 0 18px;max-width:690px}h1 span{display:block;color:var(--gold)}.hero-copy{color:#c3d0e1;font-size:15px;line-height:1.7;max-width:470px}.event-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:27px;color:#d9e3f0;font-size:12px}.meta{display:flex;gap:9px;align-items:center}.meta-icon{height:36px;width:36px;border:1px solid #ffffff28;border-radius:11px;display:grid;place-items:center;color:var(--gold);font-size:17px}.hero-visual{min-height:260px;position:relative;display:flex;align-items:center;justify-content:center}.versus{display:flex;align-items:center;gap:15px;position:relative;z-index:2}.club{width:clamp(110px,13vw,168px);height:clamp(110px,13vw,168px);border-radius:50%;background:#ffffff12;border:1px solid #ffffff36;box-shadow:0 20px 70px #0006;display:grid;place-items:center;backdrop-filter:blur(9px);overflow:hidden}.club img{width:75%;height:75%;object-fit:contain;filter:drop-shadow(0 9px 12px #0005)}.vs{font:800 15px Manrope;color:#fff;background:#ffffff18;border:1px solid #ffffff32;width:44px;height:44px;border-radius:50%;display:grid;place-items:center}.match-tag{position:absolute;right:0;top:5px;background:var(--gold);color:#122139;padding:10px 14px;border-radius:10px;font-size:10px;font-weight:800;letter-spacing:.09em;transform:rotate(4deg);box-shadow:0 12px 30px #0004}
+.quickbar{background:#0a192c;color:white;border-top:1px solid #ffffff1a}.quickbar-inner{max-width:1320px;margin:auto;padding:23px 5.2%;display:grid;grid-template-columns:repeat(3,1fr) auto;align-items:center;gap:20px}.quick-item{display:flex;align-items:center;gap:13px;border-right:1px solid #ffffff22;min-height:50px}.quick-item:nth-child(3){border:0}.quick-icon{font-size:25px;color:var(--gold)}.quick-item small{display:block;color:#9fb1c9;font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}.quick-item strong{font:700 17px Manrope}.quick-item p{margin:3px 0 0;color:#9fb1c9;font-size:11px}.btn{border:0;border-radius:12px;background:linear-gradient(110deg,#ffe29b,#f7b33e);color:#122139;padding:15px 23px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:11px;box-shadow:0 9px 22px #e4a43820;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px #e4a43838}.btn.dark{background:var(--navy);color:white;box-shadow:none}.btn.dark:hover{background:#142b49}.btn:disabled{opacity:.6;cursor:wait;transform:none}
+main{max-width:1320px;margin:auto;padding:32px 5.2% 54px}.section-title{font:800 29px Manrope;letter-spacing:-.04em;margin:0 0 7px}.section-sub{color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 22px}.booking-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.9fr);gap:20px;align-items:start}.panel{background:#fff;border:1px solid #e6edf6;border-radius:18px;padding:27px;box-shadow:0 9px 30px #19395e07}.steps{display:grid;grid-template-columns:repeat(3,1fr);margin:24px 0 26px;position:relative}.steps:before{content:"";position:absolute;height:2px;background:#e2eaf3;left:10%;right:10%;top:15px}.step{position:relative;z-index:1;display:flex;align-items:center;flex-direction:column;gap:8px;text-align:center;color:#8b9ab0;font-size:11px;font-weight:700}.step-number{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:#e7edf5;color:#7b8ba2;border:4px solid white}.step.active{color:var(--ink)}.step.active .step-number{background:#edaa31;color:#13233b;box-shadow:0 0 0 3px #ffedc7}
+.form-card{border:1px solid #e6edf5;border-radius:14px;padding:20px}.form-title{font:800 14px Manrope;margin:0 0 6px}.help{font-size:11px;color:var(--muted);margin:0 0 14px}.qty-control{display:inline-flex;align-items:center;border:1px solid #d7e2ef;border-radius:12px;padding:5px;gap:12px}.qty-control button{width:32px;height:32px;border:0;border-radius:9px;background:#f1f5fa;color:#243b59;font-size:20px}.qty-control button:hover{background:#ffe8b7}.qty-control output{font:800 18px Manrope;min-width:20px;text-align:center}.rule{height:1px;background:#e7edf4;margin:20px 0}.fields{display:grid;gap:12px}.field{position:relative}.field label{display:block;font-size:11px;font-weight:700;margin-bottom:6px;color:#3a4e69}.field input{width:100%;border:1px solid #dbe5f0;border-radius:10px;background:#fff;padding:13px 14px;outline:none;color:var(--ink);font-size:13px;transition:.2s}.field input:focus{border-color:#7aa9e6;box-shadow:0 0 0 3px #7aa9e61c}.notice{display:flex;gap:12px;background:#eff7ff;border:1px solid #e0effe;border-radius:11px;padding:13px 14px;color:#284b70;margin:16px 0 19px;font-size:11px;line-height:1.6}.notice .icon{font-size:20px;color:var(--green)}.notice strong{color:#173b5f}.fineprint{text-align:center;color:#8a9ab0;font-size:10px;margin:12px 0 0}.summary{position:sticky;top:18px}.summary-top{display:flex;gap:14px;align-items:center;margin:20px 0}.mini-art{height:84px;width:100px;flex-shrink:0;border-radius:12px;background:linear-gradient(135deg,#102e50,#235785);display:grid;place-items:center;color:#ffcf70;font-size:32px;overflow:hidden}.summary-top strong{font:800 14px Manrope;display:block;margin-bottom:7px}.summary-top small{display:block;color:var(--muted);font-size:11px;line-height:1.7}.price-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;color:#596b83;font-size:12px}.price-row strong{color:#1c304c;font-size:12px}.total{border-top:1px solid #e7edf4;margin-top:8px;padding-top:20px;display:flex;align-items:center;justify-content:space-between}.total span{font-weight:800}.total strong{font:800 27px Manrope;color:#08765a;letter-spacing:-.04em}.payment-brand{background:#f0f6ff;border:1px solid #e1ecfc;border-radius:13px;padding:16px;margin-top:22px;text-align:center}.payment-brand small{display:block;color:#58708e;font-size:11px;margin-top:8px}.mega-logo{font:800 20px Manrope;color:#14325c}.mega-logo span{color:#2085f5;font-size:26px;vertical-align:-2px}.benefits{display:grid;gap:19px;margin-top:20px}.benefit{display:flex;gap:12px;align-items:center}.benefit-icon{width:39px;height:39px;border-radius:50%;background:#0e2036;color:#fff;display:grid;place-items:center;flex-shrink:0}.benefit strong{display:block;font-size:11px;margin-bottom:4px}.benefit small{display:block;color:var(--muted);font-size:10px;line-height:1.5}
+.delivery-banner{margin-top:22px;border-radius:17px;overflow:hidden;background:linear-gradient(90deg,#08182b,#123c5b);color:white;padding:25px 30px;display:flex;align-items:center;gap:20px;position:relative}.delivery-banner:after{content:"✉";position:absolute;right:7%;font-size:90px;color:#ffffff12;transform:rotate(-12deg)}.delivery-icon{width:56px;height:56px;border-radius:50%;border:2px solid #ffffff85;display:grid;place-items:center;font-size:24px;flex-shrink:0}.delivery-banner h3{font:800 17px Manrope;margin:0 0 7px}.delivery-banner p{margin:0;color:#c2d1e1;font-size:12px;line-height:1.7;max-width:700px}.delivery-banner strong{color:#ffce70}
+footer{background:#061224;color:#a8b8cd;padding:25px 5.2% 18px}.footer-inner{max-width:1320px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:22px;font-size:11px}.footer-links a{color:#b9c7d8;text-decoration:none}.copyright{max-width:1320px;margin:20px auto 0;padding-top:15px;border-top:1px solid #ffffff16;font-size:10px;display:flex;justify-content:space-between;gap:10px}
+.toast{display:none;position:fixed;inset:0;z-index:10;background:#061224b8;backdrop-filter:blur(8px);padding:20px;align-items:center;justify-content:center}.toast.show{display:flex}.modal{width:min(490px,100%);background:white;border-radius:20px;padding:30px;box-shadow:0 25px 100px #0005;text-align:center}.modal-icon{width:62px;height:62px;background:#e7f7ef;color:#07875b;border-radius:50%;display:grid;place-items:center;font-size:30px;margin:0 auto 17px}.modal h2{font:800 25px Manrope;margin:0 0 10px}.modal p{color:#62748c;font-size:13px;line-height:1.7}.modal .warning{background:#fff5df;border-radius:10px;padding:12px;color:#75531c;font-size:11px;margin:15px 0}.modal-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+@media(max-width:900px){.nav{display:none}.hero-inner{grid-template-columns:1fr;gap:0;padding-top:48px}.hero-visual{min-height:190px;justify-content:flex-start}.match-tag{right:8%;top:0}.quickbar-inner{grid-template-columns:1fr 1fr}.quick-item:nth-child(2){border:0}.quick-item:nth-child(3){display:none}.booking-layout{grid-template-columns:1fr}.summary{position:static}.summary-panel{order:2}}
+@media(max-width:560px){.topbar{height:66px;padding:0 18px}.top-right .secure{display:none}.brand strong{font-size:13px}.brand small{font-size:8px}.hero-inner{padding:42px 22px 20px}.hero:before{background:linear-gradient(90deg,#061224ed,#07142688),linear-gradient(0deg,#071426 0%,transparent 55%),url('/assets/stadium-background.jpg') center/cover}h1{font-size:43px}.hero-copy{font-size:13px}.event-meta{gap:12px}.hero-visual{min-height:155px}.club{width:105px;height:105px}.quickbar-inner{padding:17px 22px;grid-template-columns:1fr auto;gap:12px}.quick-item{border:0}.quick-item:nth-child(2){display:none}.quick-item strong{font-size:15px}.quickbar .btn{padding:13px 14px;font-size:12px}main{padding:24px 14px 35px}.panel{padding:19px}.section-title{font-size:25px}.form-card{padding:15px}.delivery-banner{padding:20px;align-items:flex-start}.delivery-icon{width:43px;height:43px;font-size:18px}.delivery-banner h3{font-size:15px}.delivery-banner p{font-size:11px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.copyright{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Talanta Tickets home"><span class="brandmark">◆</span><span><strong>TALANTA TICKETS</strong><small>YOUR MATCH. YOUR MOMENT.</small></span></a>
+  <nav class="nav"><a href="#home">Home</a><a href="#booking">Event Details</a><a href="#how">How It Works</a><a href="#faq">FAQ</a></nav>
+  <div class="top-right"><span class="secure">♙ &nbsp; Secure checkout</span><span style="height:28px;width:1px;background:#ffffff26"></span><span class="mpay"><span class="mpaymark">M</span> MegaPay</span></div>
+</header>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">European football showdown</div>
+      <h1>Bayern Munich <span>vs Ajax</span></h1>
+      <p class="hero-copy">Two iconic clubs. One unforgettable atmosphere. Be there for the action at Raila Odinga Talanta Stadium.</p>
+      <div class="event-meta">
+        <div class="meta"><span class="meta-icon">▦</span><span><b>Event date</b><br>January 5, 2027</span></div>
+        <div class="meta"><span class="meta-icon">⌖</span><span><b>Raila Odinga Talanta Stadium</b><br>Nairobi, Kenya</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="match-tag">ONE GAME<br>ONE STADIUM<br>UNFORGETTABLE</div>
+      <div class="versus">
+        <div class="club"><img alt="Bayern Munich crest" src="/assets/bayern-crest.svg" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<b style=&quot;font-size:16px;text-align:center&quot;>FC<br>BAYERN</b>')"></div>
+        <span class="vs">VS</span>
+        <div class="club"><img alt="Ajax crest" src="/assets/ajax-crest.svg" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<b style=&quot;font-size:18px&quot;>AJAX</b>')"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="quickbar">
+  <div class="quickbar-inner">
+    <div class="quick-item"><span class="quick-icon">♢</span><div><small>Ticket price</small><strong>KES 500</strong><p>Per ticket</p></div></div>
+    <div class="quick-item"><span class="quick-icon">♧</span><div><small>Ticket demand</small><strong>High demand</strong><p>Plan your booking</p></div></div>
+    <div class="quick-item"><span class="quick-icon">▣</span><div><small>Payment method</small><strong>M-PESA via MegaPay</strong><p>Simple · Secure · Reliable</p></div></div>
+    <a class="btn" href="#booking">Buy Ticket <span>→</span></a>
+  </div>
+</section>
+<main id="booking">
+  <div class="booking-layout">
+    <section class="panel">
+      <h2 class="section-title">Book your tickets</h2>
+      <p class="section-sub">Fill in your details below to prepare your order. Payment will be requested through MegaPay.</p>
+      <div class="steps"><div class="step active"><span class="step-number">1</span><span>Ticket selection</span></div><div class="step"><span class="step-number">2</span><span>Payment (MegaPay)</span></div><div class="step"><span class="step-number">3</span><span>Confirmation</span></div></div>
+      <form id="bookingForm" class="form-card">
+        <h3 class="form-title">1. Number of tickets</h3><p class="help">KES 500 per ticket</p>
+        <div class="qty-control"><button type="button" id="minus" aria-label="Remove one ticket">−</button><output id="qty">1</output><button type="button" id="plus" aria-label="Add one ticket">+</button></div>
+        <div class="rule"></div>
+        <h3 class="form-title">2. Your details</h3><p class="help">Your ticket delivery details must be correct.</p>
+        <div class="fields">
+          <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" placeholder="Enter your full name" required minlength="2"></div>
+          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="phone">M-PESA phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="07XX XXX XXX" required pattern="(?:\+?254|0)?[17][0-9]{8}" title="Enter a valid Kenyan mobile number"></div>
+        </div>
+        <div class="notice"><span class="icon">✉</span><span>Your ticket will be sent to your email within <strong>4 business days after successful payment</strong>, due to high demand.</span></div>
+        <button class="btn dark" style="width:100%" id="payButton" type="submit">Continue to MegaPay <span>→</span></button>
+        <p class="fineprint">♢ Your information is used to process this booking. Never share your M-PESA PIN.</p>
+        <p id="formStatus" role="status" style="font-size:12px;line-height:1.6;margin:12px 0 0;color:#526982"></p>
+      </form>
+    </section>
+    <aside class="panel summary-panel summary">
+      <h3 style="font:800 18px Manrope;margin:0">Order summary</h3>
+      <div class="summary-top"><div class="mini-art">⚽</div><div><strong>Bayern Munich vs Ajax</strong><small>Raila Odinga Talanta Stadium<br>Event date: January 5, 2027</small></div></div>
+      <div class="rule"></div>
+      <div class="price-row"><span>Ticket(s) × <b id="summaryQty">1</b></span><strong id="subtotal">KES 500</strong></div>
+      <div class="price-row"><span>Service fee</span><strong>KES 0</strong></div>
+      <div class="total"><span>Total amount</span><strong id="total">KES 500</strong></div>
+      <div class="payment-brand"><div class="mega-logo"><span>ϟ</span> MegaPay</div><small>M-PESA STK Push · Secure payment</small></div>
+      <div class="benefits" id="how">
+        <div class="benefit"><span class="benefit-icon">✓</span><div><strong>Secure payments</strong><small>Payment requests handled by MegaPay</small></div></div>
+        <div class="benefit"><span class="benefit-icon">ϟ</span><div><strong>Fast and easy</strong><small>Approve the prompt on your phone</small></div></div>
+        <div class="benefit"><span class="benefit-icon">✉</span><div><strong>Ticket via email</strong><small>Within 4 business days after confirmed payment</small></div></div>
+      </div>
+    </aside>
+  </div>
+  <section class="delivery-banner"><div class="delivery-icon">✉</div><div><h3>Ticket delivery notification</h3><p>After your payment is confirmed, your ticket will be sent to your registered email address within <strong>4 business days</strong> due to high demand. Keep your booking reference for support.</p></div></section>
+  <section id="faq" style="padding:34px 2px 0"><h2 class="section-title" style="font-size:23px">A few things to know</h2><p class="section-sub" style="margin-bottom:0">Ticket price is KES 500 each. The event is scheduled for January 5, 2027. Tickets are only confirmed after payment verification; this page does not issue a ticket merely when a payment request is started.</p></section>
+</main>
+<footer><div class="footer-inner"><a class="brand" href="#home"><span class="brandmark">◆</span><span><strong>TALANTA TICKETS</strong><small>YOUR MATCH. YOUR MOMENT.</small></span></a><div class="footer-links"><a href="#home">Home</a><a href="#booking">Event details</a><a href="#faq">FAQ</a><a href="mailto:support@example.com">Contact support</a></div><div class="mpay"><span class="mpaymark">M</span> MegaPay</div></div><div class="copyright"><span>© <span id="year"></span> Talanta Tickets. All rights reserved.</span><span>Secure checkout powered by MegaPay</span></div></footer>
+<div class="toast" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon">✓</div><h2 id="modalTitle">Booking details received</h2><p id="modalText">Your order details are ready.</p><div class="warning">An accepted STK Push is not proof of payment. Your ticket is not confirmed until MegaPay payment verification is completed. Keep your booking reference for support.</div><div class="modal-actions"><button class="btn dark" id="closeModal" type="button">Back to booking</button></div></div></div>
+<script>
+const price=500;let quantity=1;
+const $=id=>document.getElementById(id);
+function money(n){return 'KES '+n.toLocaleString('en-KE')}
+function updateTotal(){ $('qty').textContent=quantity;$('summaryQty').textContent=quantity;$('subtotal').textContent=money(quantity*price);$('total').textContent=money(quantity*price);$('minus').disabled=quantity<=1;$('plus').disabled=quantity>=10; }
+$('minus').addEventListener('click',()=>{if(quantity>1){quantity--;updateTotal()}});
+$('plus').addEventListener('click',()=>{if(quantity<10){quantity++;updateTotal()}});
+$('year').textContent=new Date().getFullYear();
+$('closeModal').addEventListener('click',()=>$('modal').classList.remove('show'));
+$('modal').addEventListener('click',e=>{if(e.target===$('modal'))$('modal').classList.remove('show')});
+$('bookingForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const name=$('name').value.trim(),email=$('email').value.trim(),phone=$('phone').value.trim();
+ if(!name||!email||!phone){$('formStatus').textContent='Please complete all fields.';return}
+ const button=$('payButton');button.disabled=true;button.textContent='Preparing checkout…';
+ $('formStatus').textContent='';
+ try{
+   const response=await fetch('/api/payments/initiate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,quantity})});
+   const data=await response.json();
+   if(!response.ok) throw new Error(data.error||'Payment could not be started.');
+   $('modalTitle').textContent='Check your phone';
+   $('modalText').textContent='MegaPay has accepted the payment request. Approve the M-PESA prompt on your phone. Booking reference: '+(data.orderId||'pending')+'. Your ticket will only be confirmed after the payment is verified.';
+   $('modal').classList.add('show');
+ }catch(err){
+   $('modalTitle').textContent='Checkout could not start';
+   $('modalText').textContent=err.message==='Failed to fetch'?'The payment service could not be reached. Please try again shortly.':err.message;
+   $('modal').classList.add('show');
+ }finally{button.disabled=false;button.innerHTML='Continue to MegaPay <span>→</span>'}
+});
+updateTotal();
+</script>
+</body>
+</html>
