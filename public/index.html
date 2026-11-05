@@ -54,7 +54,7 @@ footer{background:#061224;color:#a8b8cd;padding:25px 5.2% 18px}.footer-inner{max
 </section>
 <section class="quickbar">
   <div class="quickbar-inner">
-    <div class="quick-item"><span class="quick-icon">♢</span><div><small>Ticket price</small><strong>KES 500</strong><p>Per ticket</p></div></div>
+    <div class="quick-item"><span class="quick-icon">♢</span><div><small>Ticket prices</small><strong>From KES 500</strong><p>Choose your section</p></div></div>
     <div class="quick-item"><span class="quick-icon">♧</span><div><small>Ticket demand</small><strong>High demand</strong><p>Plan your booking</p></div></div>
     <div class="quick-item"><span class="quick-icon">▣</span><div><small>Payment method</small><strong>M-PESA via MegaPay</strong><p>Simple · Secure · Reliable</p></div></div>
     <a class="btn" href="#booking">Buy Ticket <span>→</span></a>
@@ -67,10 +67,12 @@ footer{background:#061224;color:#a8b8cd;padding:25px 5.2% 18px}.footer-inner{max
       <p class="section-sub">Fill in your details below to prepare your order. Payment will be requested through MegaPay.</p>
       <div class="steps"><div class="step active"><span class="step-number">1</span><span>Ticket selection</span></div><div class="step"><span class="step-number">2</span><span>Payment (MegaPay)</span></div><div class="step"><span class="step-number">3</span><span>Confirmation</span></div></div>
       <form id="bookingForm" class="form-card">
-        <h3 class="form-title">1. Number of tickets</h3><p class="help">KES 500 per ticket</p>
+        <h3 class="form-title">1. Ticket category</h3><p class="help">Choose your preferred seating category and price.</p>
+        <div class="field" style="margin-bottom:16px"><label for="ticketType">Seating category</label><select id="ticketType" name="ticketType" required style="width:100%;padding:13px 14px;border:1px solid #d7e2ef;border-radius:10px;background:#fff;color:#13233b;font:inherit"><option value="LEVEL_1">Level 1 — KES 1,500</option><option value="LEVEL_2">Level 2 — KES 1,000</option><option value="LEVEL_3">Level 3 — KES 500</option><option value="GOLD">Gold — KES 2,000</option><option value="PLATINUM">Platinum — KES 2,500</option></select></div>
+        <h3 class="form-title">2. Number of tickets</h3><p class="help" id="unitPrice">KES 1,500 per ticket</p>
         <div class="qty-control"><button type="button" id="minus" aria-label="Remove one ticket">−</button><output id="qty">1</output><button type="button" id="plus" aria-label="Add one ticket">+</button></div>
         <div class="rule"></div>
-        <h3 class="form-title">2. Your details</h3><p class="help">Your ticket delivery details must be correct.</p>
+        <h3 class="form-title">3. Your details</h3><p class="help">Your ticket delivery details must be correct.</p>
         <div class="fields">
           <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" placeholder="Enter your full name" required minlength="2"></div>
           <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
@@ -86,9 +88,9 @@ footer{background:#061224;color:#a8b8cd;padding:25px 5.2% 18px}.footer-inner{max
       <h3 style="font:800 18px Manrope;margin:0">Order summary</h3>
       <div class="summary-top"><div class="mini-art">⚽</div><div><strong>Bayern Munich vs Ajax</strong><small>Raila Odinga Talanta Stadium<br>Event date: January 5, 2027</small></div></div>
       <div class="rule"></div>
-      <div class="price-row"><span>Ticket(s) × <b id="summaryQty">1</b></span><strong id="subtotal">KES 500</strong></div>
+      <div class="price-row"><span><span id="summaryType">Level 1</span> × <b id="summaryQty">1</b></span><strong id="subtotal">KES 1,500</strong></div>
       <div class="price-row"><span>Service fee</span><strong>KES 0</strong></div>
-      <div class="total"><span>Total amount</span><strong id="total">KES 500</strong></div>
+      <div class="total"><span>Total amount</span><strong id="total">KES 1,500</strong></div>
       <div class="payment-brand"><div class="mega-logo"><span>ϟ</span> MegaPay</div><small>M-PESA STK Push · Secure payment</small></div>
       <div class="benefits" id="how">
         <div class="benefit"><span class="benefit-icon">✓</span><div><strong>Secure payments</strong><small>Payment requests handled by MegaPay</small></div></div>
@@ -98,17 +100,21 @@ footer{background:#061224;color:#a8b8cd;padding:25px 5.2% 18px}.footer-inner{max
     </aside>
   </div>
   <section class="delivery-banner"><div class="delivery-icon">✉</div><div><h3>Ticket delivery notification</h3><p>After your payment is confirmed, your ticket will be sent to your registered email address within <strong>4 business days</strong> due to high demand. Keep your booking reference for support.</p></div></section>
-  <section id="faq" style="padding:34px 2px 0"><h2 class="section-title" style="font-size:23px">A few things to know</h2><p class="section-sub" style="margin-bottom:0">Ticket price is KES 500 each. The event is scheduled for January 5, 2027. Tickets are only confirmed after payment verification; this page does not issue a ticket merely when a payment request is started.</p></section>
+  <section id="faq" style="padding:34px 2px 0"><h2 class="section-title" style="font-size:23px">A few things to know</h2><p class="section-sub" style="margin-bottom:0">Ticket prices vary by seating category: Level 1 KES 1,500; Level 2 KES 1,000; Level 3 KES 500; Gold KES 2,000; Platinum KES 2,500. The event is scheduled for January 5, 2027. Tickets are only confirmed after payment verification; this page does not issue a ticket merely when a payment request is started.</p></section>
 </main>
 <footer><div class="footer-inner"><a class="brand" href="#home"><span class="brandmark">◆</span><span><strong>TALANTA TICKETS</strong><small>YOUR MATCH. YOUR MOMENT.</small></span></a><div class="footer-links"><a href="#home">Home</a><a href="#booking">Event details</a><a href="#faq">FAQ</a><a href="mailto:support@example.com">Contact support</a></div><div class="mpay"><span class="mpaymark">M</span> MegaPay</div></div><div class="copyright"><span>© <span id="year"></span> Talanta Tickets. All rights reserved.</span><span>Secure checkout powered by MegaPay</span></div></footer>
-<div class="toast" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon">✓</div><h2 id="modalTitle">Booking details received</h2><p id="modalText">Your order details are ready.</p><div class="warning">An accepted STK Push is not proof of payment. Your ticket is not confirmed until MegaPay payment verification is completed. Keep your booking reference for support.</div><div class="modal-actions"><button class="btn dark" id="closeModal" type="button">Back to booking</button></div></div></div>
+<div class="toast" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-icon">✓</div><h2 id="modalTitle">Booking details received</h2><p id="modalText">Your order details are ready.</p><div class="modal-actions"><button class="btn dark" id="closeModal" type="button">Back to booking</button></div></div></div>
 <script>
-const price=500;let quantity=1;
+const prices={LEVEL_1:1500,LEVEL_2:1000,LEVEL_3:500,GOLD:2000,PLATINUM:2500};
+const labels={LEVEL_1:'Level 1',LEVEL_2:'Level 2',LEVEL_3:'Level 3',GOLD:'Gold',PLATINUM:'Platinum'};
+let quantity=1;
 const $=id=>document.getElementById(id);
 function money(n){return 'KES '+n.toLocaleString('en-KE')}
-function updateTotal(){ $('qty').textContent=quantity;$('summaryQty').textContent=quantity;$('subtotal').textContent=money(quantity*price);$('total').textContent=money(quantity*price);$('minus').disabled=quantity<=1;$('plus').disabled=quantity>=10; }
+function selectedType(){return $('ticketType').value}
+function updateTotal(){const type=selectedType(),price=prices[type];$('qty').textContent=quantity;$('summaryQty').textContent=quantity;$('summaryType').textContent=labels[type];$('unitPrice').textContent=money(price)+' per ticket';$('subtotal').textContent=money(quantity*price);$('total').textContent=money(quantity*price);$('minus').disabled=quantity<=1;$('plus').disabled=quantity>=10; }
 $('minus').addEventListener('click',()=>{if(quantity>1){quantity--;updateTotal()}});
 $('plus').addEventListener('click',()=>{if(quantity<10){quantity++;updateTotal()}});
+$('ticketType').addEventListener('change',updateTotal);
 $('year').textContent=new Date().getFullYear();
 $('closeModal').addEventListener('click',()=>$('modal').classList.remove('show'));
 $('modal').addEventListener('click',e=>{if(e.target===$('modal'))$('modal').classList.remove('show')});
@@ -119,11 +125,11 @@ $('bookingForm').addEventListener('submit',async e=>{
  const button=$('payButton');button.disabled=true;button.textContent='Preparing checkout…';
  $('formStatus').textContent='';
  try{
-   const response=await fetch('/api/payments/initiate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,quantity})});
+   const response=await fetch('/api/payments/initiate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,quantity,ticketType:selectedType()})});
    const data=await response.json();
    if(!response.ok) throw new Error(data.error||'Payment could not be started.');
    $('modalTitle').textContent='Check your phone';
-   $('modalText').textContent='MegaPay has accepted the payment request. Approve the M-PESA prompt on your phone. Booking reference: '+(data.orderId||'pending')+'. Your ticket will only be confirmed after the payment is verified.';
+   $('modalText').textContent='Approve the M-PESA prompt on your phone. Booking reference: '+(data.orderId||'pending')+'. Your ticket will only be confirmed after the payment is verified.';
    $('modal').classList.add('show');
  }catch(err){
    $('modalTitle').textContent='Checkout could not start';

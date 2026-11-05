@@ -1,6 +1,6 @@
 import { randomBytes } from 'node:crypto';
 
-const PRICE_PER_TICKET = 500;
+const TICKET_PRICES = Object.freeze({ LEVEL_1: 1500, LEVEL_2: 1000, LEVEL_3: 500, GOLD: 2000, PLATINUM: 2500 });
 const MEGAPAY_URL = 'https://megapay.co.ke/backend/v1/initiatestk';
 
 function json(res, status, payload) {
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     return json(res, 405, { error: 'Method not allowed.' });
   }
 
-  const { name, email, phone, quantity } = req.body || {};
+  const { name, email, phone, quantity, ticketType } = req.body || {};
   const qty = Number(quantity);
   const msisdn = validKenyanPhone(phone);
 
@@ -39,7 +39,10 @@ export default async function handler(req, res) {
   }
 
   const orderId = `TAL-${randomBytes(6).toString('hex').toUpperCase()}`;
-  const amount = qty * PRICE_PER_TICKET;
+  if (!Object.prototype.hasOwnProperty.call(TICKET_PRICES, ticketType)) {
+    return json(res, 400, { error: 'Choose a valid ticket category.' });
+  }
+  const amount = qty * TICKET_PRICES[ticketType];
 
   try {
     const upstream = await fetch(MEGAPAY_URL, {
@@ -76,6 +79,8 @@ export default async function handler(req, res) {
       transactionId,
       amount,
       quantity: qty,
+      ticketType,
+      unitPrice: TICKET_PRICES[ticketType],
       message: 'Payment request initiated. Approve the M-PESA prompt; your payment must be verified before a ticket is confirmed.'
     });
   } catch (error) {
